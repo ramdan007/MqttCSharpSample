@@ -1,0 +1,13 @@
+G:\Users\Ramazan\Documents\GitHub\MqttCSharpSample\Application1\bin\Debug\Application1.exe.config
+G:\Users\Ramazan\Documents\GitHub\MqttCSharpSample\Application1\bin\Debug\Application1.exe
+G:\Users\Ramazan\Documents\GitHub\MqttCSharpSample\Application1\bin\Debug\Application1.pdb
+G:\Users\Ramazan\Documents\GitHub\MqttCSharpSample\Application1\bin\Debug\M2Mqtt.Net.dll
+G:\Users\Ramazan\Documents\GitHub\MqttCSharpSample\Application1\bin\Debug\M2Mqtt.Net.pdb
+G:\Users\Ramazan\Documents\GitHub\MqttCSharpSample\Application1\obj\Debug\Application1.Form1.resources
+G:\Users\Ramazan\Documents\GitHub\MqttCSharpSample\Application1\obj\Debug\Application1.csproj.GenerateResource.cache
+G:\Users\Ramazan\Documents\GitHub\MqttCSharpSample\Application1\obj\Debug\Application1.csproj.CoreCompileInputs.cache
+G:\Users\Ramazan\Documents\GitHub\MqttCSharpSample\Application1\obj\Debug\Application1.csproj.CopyComplete
+G:\Users\Ramazan\Documents\GitHub\MqttCSharpSample\Application1\obj\Debug\Application1.exe
+G:\Users\Ramazan\Documents\GitHub\MqttCSharpSample\Application1\obj\Debug\Application1.pdb
+G:\Users\Ramazan\Documents\GitHub\MqttCSharpSample\Application1\obj\Debug\Application1.csproj.AssemblyReference.cache
+G:\Users\Ramazan\Documents\GitHub\MqttCSharpSample\Application1\obj\Debug\Application1.csproj.SuggestedBindingRedirects.cache

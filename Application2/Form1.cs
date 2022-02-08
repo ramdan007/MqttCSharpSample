@@ -25,10 +25,10 @@ namespace Application2
         {
             Task.Run(() => 
             {
-                mqttClient = new MqttClient("127.0.0.1");
+                mqttClient = new MqttClient("159.89.30.124");
                 mqttClient.MqttMsgPublishReceived += MqttClient_MqttMsgPublishReceived;
-                mqttClient.Subscribe(new string[] { "Application2/Message" }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
-                mqttClient.Connect("Application1");
+                mqttClient.Subscribe(new string[] { "Application1/Message" }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
+                mqttClient.Connect("nitro2", "nitro2", "123456");
             });
         }
 
@@ -44,7 +44,8 @@ namespace Application2
             {
                 if (mqttClient != null && mqttClient.IsConnected)
                 {
-                    mqttClient.Publish("Application1/Message", Encoding.UTF8.GetBytes(textBox1.Text));
+                    mqttClient.Publish("Application2/Message", Encoding.UTF8.GetBytes(textBox1.Text));
+
                 }
             });
         }

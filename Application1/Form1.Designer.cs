@@ -37,17 +37,18 @@ namespace Application1
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(12, 90);
+            this.listBox1.Location = new System.Drawing.Point(8, 58);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(776, 344);
+            this.listBox1.Size = new System.Drawing.Size(519, 225);
             this.listBox1.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(582, 49);
+            this.button1.Location = new System.Drawing.Point(388, 32);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 35);
+            this.button1.Size = new System.Drawing.Size(137, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Publish MQTT Message";
             this.button1.UseVisualStyleBackColor = true;
@@ -55,21 +56,23 @@ namespace Application1
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 17);
+            this.textBox1.Location = new System.Drawing.Point(8, 11);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(776, 26);
+            this.textBox1.Size = new System.Drawing.Size(519, 20);
             this.textBox1.TabIndex = 3;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
-            this.Text = "Application 1";
+            this.Text = "cihaz 1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
