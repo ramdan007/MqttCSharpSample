@@ -30,10 +30,10 @@ namespace Application2
         {
             Task.Run(() =>
             {
-                mqttClient = new MqttClient("159.89.30.124");
+                mqttClient = new MqttClient("ip");
                 mqttClient.MqttMsgPublishReceived += MqttClient_MqttMsgPublishReceived;
                 mqttClient.Subscribe(new string[] { "TRM1BC330_TRS54FBF0/MD" }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
-                mqttClient.Connect("BerkanIswhore", "BerkanIswhore", "Berkan@01");
+                mqttClient.Connect("username", "id", "password");
             });
         }
 

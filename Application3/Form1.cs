@@ -29,10 +29,10 @@ namespace Application3
         {
             Task.Run(() =>
             {
-                mqttClient = new MqttClient("159.89.30.124");
+                mqttClient = new MqttClient("ip");
                 mqttClient.MqttMsgPublishReceived += MqttClient_MqttMsgPublishReceived;
                 mqttClient.Subscribe(new string[] { "Application1/Message" }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
-                mqttClient.Connect("nitro3", "nitro3", "123456");
+                mqttClient.Connect("username", "userid", "password");
 
             });
         }
