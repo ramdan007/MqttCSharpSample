@@ -27,7 +27,7 @@ namespace Application1
             {
                 mqttClient = new MqttClient("159.89.30.124");
                 mqttClient.MqttMsgPublishReceived += MqttClient_MqttMsgPublishReceived;
-                mqttClient.Subscribe(new string[] { "Application2/Message" }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
+                mqttClient.Subscribe(new string[] { "Application2/Message" }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
                 mqttClient.Connect("nitro1", "nitro1", "123456");
             });
         }
@@ -40,20 +40,24 @@ namespace Application1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10000; i++)
+
+            Task.Run(() =>
             {
-                Task.Run(() =>
+
+                if (mqttClient != null && mqttClient.IsConnected)
                 {
-                    
-                    if (mqttClient != null && mqttClient.IsConnected)
+                    for (int i = 0; i < 1000; i++)
                     {
 
-                        mqttClient.Publish("Application1/Message", Encoding.UTF8.GetBytes(DateTime.Now.ToFileTime().ToString()));
+
+
+                        mqttClient.Publish("Application1/Message", Encoding.UTF8.GetBytes(DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff tt").ToString()));
                     }
+                }
 
 
-                });
-            }
+            });
+
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,9 @@ namespace Application3
     public partial class Form1 : Form
     {
         MqttClient mqttClient;
+        int counter = 0;
+        DateTime startfull = DateTime.Now;
+        DateTime endfull = DateTime.Now;
 
         public Form1()
         {
@@ -35,11 +39,29 @@ namespace Application3
 
         private void MqttClient_MqttMsgPublishReceived(object sender, uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs e)
         {
+
+
+
+            counter++; 
             var message = Encoding.UTF8.GetString(e.Message);
-            DateTime end = DateTime.Now; 
-            var start = DateTime.ParseExact(message, "MM/dd/yyyy hh:mm:ss.fff tt", System.Globalization.CultureInfo.InvariantCulture);
-            var def = (end - start).TotalMilliseconds;
-            listBox1.Invoke((MethodInvoker)(() => listBox1.Items.Add(end.ToString("MM/dd/yyyy hh:mm:ss.fff tt ") + "   "+ message+"   "+ def.ToString())));
+            //DateTime end = DateTime.Now; 
+            //var start = DateTime.ParseExact(message, "MM/dd/yyyy hh:mm:ss.fff tt",
+            //                           System.Globalization.CultureInfo.InvariantCulture);
+            //var def = (end - start).TotalMilliseconds;
+            listBox1.Invoke((MethodInvoker)(() => listBox1.Items.Add(counter.ToString() + "\t"  + message)));
+            //if (counter % 10000 == 1)
+            //{
+            //    startfull = DateTime.Now;
+            //}
+            //if (counter % 1000 == 0)
+            //{
+                
+            //    endfull = DateTime.Now;
+            //    Debug.WriteLine((endfull - startfull).TotalMilliseconds);
+        
+            //}
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
